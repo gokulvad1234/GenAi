@@ -1,0 +1,4 @@
+What is LCEL?
+    It is stand for Langchain Expression Language.
+    combines Prompt + pareser(similar type of casting) 
+    with the help chain =>' 

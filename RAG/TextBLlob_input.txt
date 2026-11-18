@@ -1,0 +1,4 @@
+I havv a smal librarry of books about langauge and computor sciense.
+The studnets are lerning how to proces text and corect mispelled wrods.
+TextBlob can sugest posible spelling corections, but it may not fix every mistake.
+This sentense is writen with severel spelling erors for a text normalizaton demo.

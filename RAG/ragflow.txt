@@ -1,0 +1,147 @@
+RAG PIPELINE
+Step 1:
+Data Loader 😊😊😊😊😊😊😊😊😊😊😊😊😊😊
+    -word
+    -pdf
+    .txt
+    How ? and which tool do we use for this ?
+    langchain(framework)
+    Interview Questions:
+    how you will extract text information from (pdf with text) ?
+        -langchain
+    pdf with image ?
+        -inside image text content,solution -> OCR model(paddle ocr)
+        -graph based image,solution -> (VLM)
+    OCR ?
+     -with help of this Paddle OCR model we can extract the text inside image.
+    VLM ?
+     -we can get summary or description about graph.
+    How will you handle if pdf is having both text and image content ?
+    hybrid 
+    1) text -> langchain
+    2) image -> VLM or OCR depends on scenario
+
+    merge both both text (one from langchain document loader and second from VLM or OCR) before 
+    splitting the documents into multiple parts.
+Step 2)
+Text normalizati😊😊
+1)page numbers
+2)unwanted characters(removing emoji's,spl characters,punctuations)
+3)exapand the words (example => didn't) did not,example 2 ASAP
+4)correcting the words(not possible to correct all the words)
+.
+.
+10)
+NLP
+1)nltk(natural language toolkit)
+2)spacy
+Step 3)
+Chunking => converting the document into multiple parts
+part -> chunk
+Tool => langchain
+Step 4)
+Embeddings => converts chunks into numbers(vectors)
+Tool: langchain
+Technique : transformers(encoder only architecture)
+Step 5)
+Vector DB
+Tool: langchain
+DB: FAISS
+
+ 
+
+Oct 10 - 12:48 pm
+RAG PIPELINE
+Step 1:
+Data Loader
+    -word
+    -pdf
+    .txt
+    How ? and which tool do we use for this ?
+    langchain(framework)
+    Interview Questions:
+    how you will extract text information from (pdf with text) ?
+        -langchain
+    pdf with image ?
+        -inside image text content,solution -> OCR model(paddle ocr)
+        -graph based image,solution -> (VLM)
+    OCR ?
+     -with help of this Paddle OCR model we can extract the text inside image.
+    VLM ?
+     -we can get summary or description about graph.
+    How will you handle if pdf is having both text and image content ?
+    hybrid 
+    1) text -> langchain
+    2) image -> VLM or OCR depends on scenario
+
+    merge both both text (one from langchain document loader and second from VLM or OCR) before 
+    splitting the documents into multiple parts.
+Step 2)
+Text normalization
+1)page numbers
+2)unwanted characters(removing emoji's,spl characters,punctuations)
+3)exapand the words (example => didn't) did not,example 2 ASAP
+4)correcting the words(not possible to correct all the words)
+.
+.
+10)
+NLP
+1)nltk(natural language toolkit)
+2)spacy
+Step 3)
+Chunking => converting the document into multiple parts
+part -> chunk
+Tool => langchain
+Step 4)
+Embeddings => converts chunks into numbers(vectors)
+Tool: langchain
+Technique : transformers(encoder only architecture)
+Step 5)
+Vector DB
+Tool: langchain
+DB: FAISS
+
+step 6)
+user query(prompt)
+
+step7)
+
+
+Tokenization
+splitting the text into small parts
+Tool => langchain and python scripts
+
+step 8)
+
+query Embeddings
+
+Tool=> langchain
+Technique : Embedding(converts text into vectors)
+
+step 9)
+Retrieval (Extracting the relevant documents from vector database)
+Technique : similarity search
+statistics concepts:
+            1)cosine similarity
+            2)Euclidean Distance(knn)
+
+Interview Questions:
+RAG uses which algorithm for the Retrieval?
+KNN algorithm(Euclidean Distance Formula)
+
+step 10)
+LLM (Large language model)
+Tool=> langchain
+-This we use to structure the output.
+
+Diagram:
+ 
+       documents --------Text normalization------>Chunking--->Embeddings--->vectorDB
+       loader                                                   -             -
+
+                                                                -
+                                                                -
+       user query---->Tokenization-----------------------query Embeddings   Retrieval(relevant documents)
+
+
+
